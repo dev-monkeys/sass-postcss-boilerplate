@@ -11,7 +11,7 @@ var gulp = require("gulp"),
     gulpPostCss = require('gulp-postcss'),
     postcss = require('postcss'),
     reload = browsersync.reload,
-    supportedBrowsers = "last 4 versions",
+    supportedBrowsers = "last 2 versions",
     doiuse = require('doiuse'),
     autoprefixer = require('autoprefixer'),
     postcssDiscardDuplicates = require('postcss-discard-duplicates'),
@@ -74,5 +74,3 @@ gulp.task("serve", ["watch"], function () {
     gulp.watch("./css/*.css").on("change", reload);
     gulp.watch("./*.html").on("change", reload);
 });
-
-

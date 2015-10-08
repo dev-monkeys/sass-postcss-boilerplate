@@ -1,0 +1,21 @@
+/* Box Models etc. */
+* {
+		box-sizing: border-box;
+	}
+::selection {
+	background: #3297FD;
+	text-shadow: none;
+} /* Remove text-shadow in selection highlight */
+
+:root {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: $font-stack;
+	font-size: $base-font-size;
+	color: $primary-text-color;
+	background: $body-background;
+}

@@ -1,0 +1,11 @@
+/* Clearfix just in case if not using Flexbox */
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

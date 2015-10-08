@@ -1,0 +1,28 @@
+/*
+	[[ Project Name ]]
+	Repository: https://github.com/[[repo]]
+	By: Mariusz Heyda | insanepl@gmail.com | @insanepl
+	Open-Source Base SCSS Project with usefull mixins ready to use with gulp.
+	Forget about prefixes, flexbox bugs, optimization etc. Just write simple SCSS
+	Some Credits for simple solutions goes to: Gilles Bertaux, HTML5 Boilerplate Dev Team &
+	Nicolas Gallagher
+*/
+
+/* Reset & Helpers */
+@import "partials/normalize";
+// @import "partials/formreset";
+
+/* Variables */
+@import "partials/variables";
+
+/* Base & Partials */
+@import "partials/base";
+
+/* Mixins */
+@import "partials/mixins";
+
+/* Page Styles */
+// Page Styles Goes Here //
+
+/* Fallback */
+@import "partials/fallback";
