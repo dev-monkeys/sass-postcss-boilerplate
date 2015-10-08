@@ -59,7 +59,7 @@ input {
 	background-clip: padding-box;
 	border: 1px solid $inheritColor;
 	padding: $formPadding;
-	line-height: $formHeight -1px;
+	line-height: $formHeight - 2px;
 	min-height: $formHeight;
 	max-height: $formHeight;
 
@@ -79,7 +79,7 @@ input {
 	&::-webkit-clear-button
 	{
 		display: none;
-		-webkit-appearance: none;
+		appearance: none;
 	}
 
 	&[type="reset"],
@@ -87,7 +87,6 @@ input {
 	&[type="submit"] {
 		overflow: visible;
 		appearance: button;
-		-webkit-appearance: button;
 		cursor: pointer;
 	}
 
@@ -99,16 +98,16 @@ input {
 
 	&[type="checkbox"] {
 		padding: 0;
-		-webkit-appearance: radio;
+		appearance: radio;
 	}
 	&[type="radio"] {
 		padding: 0;
-		-webkit-appearance: checkbox;
+		appearance: checkbox;
 	}
 
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
-		-webkit-appearance: none;
+		appearance: none;
 		display: none;
 	}
 
