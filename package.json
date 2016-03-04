@@ -1,21 +1,22 @@
 {
-  "devDependencies": {
-    "browser-sync": "2.x",
-    "gulp": "^3.8.8",
-    "gulp-sourcemaps": "1.x",
-    "gulp-sass": "2.x",
-    "gulp-postcss": "6.x",
-    "doiuse": "1.x",
-    "postcss-discard-duplicates": "2.x",
-    "postcss-discard-empty": "2.x",
-    "postcss-round-subpixels": "1.x",
-    "postcss-flexbugs-fixes": "1.x",
-    "postcss-focus": "1.x",
-    "postcss-zindex": "2.x",
-    "postcss-vmin": "2.x",
-    "postcss-opacity": "3.x",
-    "postcss-style-guide": "0.x"
-  },
   "name": "absolvent",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "browserslist": "^1.1.3",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss": "^5.0.19",
+    "postcss-discard-duplicates": "^2.0.1",
+    "postcss-discard-empty": "^2.0.1",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-focus": "^1.0.0",
+    "postcss-opacity": "^3.0.0",
+    "postcss-round-subpixels": "^1.2.0",
+    "postcss-vmin": "^2.0.0",
+    "postcss-zindex": "^2.0.1"
+  }
 }

@@ -12,7 +12,6 @@ var gulp = require("gulp"),
     postcss = require('postcss'),
     reload = browsersync.reload,
     supportedBrowsers = "last 2 versions",
-    doiuse = require('doiuse'),
     autoprefixer = require('autoprefixer'),
     postcssDiscardDuplicates = require('postcss-discard-duplicates'),
     postcssDiscardEmpty = require('postcss-discard-empty'),
@@ -53,12 +52,6 @@ gulp.task("sass", function () {
 gulp.task("doiuse", function () {
     gulp.src("./css/**/*.css")
         .pipe(gulpPostCss([
-            doiuse({
-                browsers: supportedBrowsers,
-                onFeatureUsage: function (usageInfo) {
-                    console.log(usageInfo.message);
-                }
-            })
         ]));
 });
 

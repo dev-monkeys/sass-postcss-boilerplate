@@ -1,144 +1,124 @@
 /* Mariusz Heyda, insanepl@gmail.com, @insanepl
    License: none (public domain)
-   Crossbrowser Forms Reset & Styling v.0.2
+   Crossbrowser Forms Reset v.0.3
 */
 
-/* Variables - Edit to fully customize your forms */
-/* 1 */
-/* You can set color on your own or keep it inherited from form main Color */
-/* http://caniuse.com/#feat=currentcolor */
-
-/* 2 */
-/* Padding and Height Based on Font Size, feel free to change as you need */
-$formBackground: #fff;
-$formMainColor: #E112AB;
-$formFontSize: 14px;
-$formPadding: 0 $formFontSize - 2px; /* 2 */
-$formHeight: $formFontSize + ($formFontSize*0.5)*2.5; /* 2 */
-$inheritColor: currentColor; /* 1 */
-
-body {
-	background: #c0c0c0 !important;
-}
 form {
-	margin: auto;
-	width: 800px;
+  margin: auto;
+  width: 800px;
 }
 
 input, select, textarea {
-	display: inline-block;
-	margin: 0;
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: auto;
+  vertical-align: middle;
+  white-space: normal;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  appearance: none;
+  border-radius: 0;
+  outline: 0;
+
+  &:focus,
+  &:active,
+  &:hover {
+	outline: 0;
+  }
+
+  &::-moz-focus-inner {
 	border: 0;
 	padding: 0;
-	width: auto;
-	vertical-align: middle;
-	white-space: normal;
-	color: $formMainColor;
-	font-size: $formFontSize;
-	font-family: inherit;
-	appearance: none;
-	border-radius: 0;
-	background: $formBackground;
-	outline: 0;
+  }
 
-	&:focus,
-	&:active,
-	&:hover {
-		outline: 0;
-	}
-
-	&::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
+  &:invalid {
+	outline: none;
+	box-shadow: none;
+  }
 }
 
 input {
-	/* 1 */
-	/* Fixing Vertical Align */
-	background-clip: padding-box;
-	border: 1px solid $inheritColor;
-	padding: $formPadding;
-	line-height: $formHeight - 2px;
-	min-height: $formHeight;
-	max-height: $formHeight;
+  /* 1 */
+  /* Fixing Vertical Align */
+  background-clip: padding-box;
 
-	&[type=search] {
-		appearance: textfield;
-		box-sizing: border-box;
-	}
+  &[type=search] {
+	appearance: textfield;
+	box-sizing: border-box;
+  }
 
-	&[type=number] {
-		-moz-appearance:textfield;
-	}
+  &[type=number] {
+	-moz-appearance: textfield;
+  }
 
-	&::-webkit-search-decoration {
-		display: none;
-	}
+  &::-webkit-search-decoration {
+	display: none;
+  }
 
-	&::-webkit-clear-button
-	{
-		display: none;
-		appearance: none;
-	}
+  &::-webkit-clear-button {
+	display: none;
+	appearance: none;
+  }
 
-	&[type="reset"],
-	&[type="button"],
-	&[type="submit"] {
-		overflow: visible;
-		appearance: button;
-		cursor: pointer;
-	}
+  &[type="reset"],
+  &[type="button"],
+  &[type="submit"] {
+	overflow: visible;
+	appearance: button;
+	cursor: pointer;
+  }
 
-	&::-webkit-file-upload-button {
-		padding: 0;
-		border: 0;
-		background: none;
-	}
+  &::-webkit-file-upload-button {
+	padding: 0;
+	border: 0;
+	background: none;
+  }
 
-	&[type="checkbox"] {
-		padding: 0;
-		appearance: radio;
-	}
-	&[type="radio"] {
-		padding: 0;
-		appearance: checkbox;
-	}
+  &[type="checkbox"] {
+	padding: 0;
+	appearance: radio;
+  }
+  &[type="radio"] {
+	padding: 0;
+	appearance: checkbox;
+  }
 
-	&::-webkit-inner-spin-button,
-	&::-webkit-outer-spin-button {
-		appearance: none;
-		display: none;
-	}
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+	appearance: none;
+	display: none;
+  }
 
-	&::-ms-clear, &::-ms-reveal {
-		display: none;
-		width: 0;
-		height: 0;
-	}
+  &::-ms-clear, &::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+  }
 }
 
 select {
-	user-select: none;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	border: 1px solid $inheritColor;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-	&::-ms-expand {
-		display: none;
-	}
+  &::-ms-expand {
+	display: none;
+  }
 
-	/* 1 */
-	/* Remove Outline from Select Elements on FF */
-	&:-moz-focusring {
-		color: transparent; /* 1 */
-		text-shadow: 0 0 0 $formMainColor; /* 1 */
-	}
+  /* 1 */
+  /* Remove Outline from Select Elements on FF */
+  &:-moz-focusring {
+	color: transparent; /* 1 */
+	text-shadow: 0 0 0 transparent; /* 1 */
+  }
 
 }
 
 textarea {
-	vertical-align: top;
-	padding-right: 10px;
-	resize: none;
+  vertical-align: top;
+  padding-right: 10px;
+  resize: none;
 }
