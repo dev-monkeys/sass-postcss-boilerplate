@@ -20,7 +20,6 @@ var gulp = require("gulp"),
     postcssFocus = require('postcss-focus'),
     postcssZindex = require('postcss-zindex'),
     postcssVmin = require('postcss-vmin'),
-    postcssOpacity = require('postcss-opacity');
 
 gulp.task("sass", function () {
     gulp.src("./scss/**/*.scss")
